@@ -1,0 +1,104 @@
+.ripple-out-1 {
+    height: 300px;
+    background: radial-gradient(circle at 20% 50%, rgba(78, 84, 200, 0.1) 0%, transparent 100%), #0a0a14;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    animation: float 6s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ripple-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+.ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px; /* INCREASE AND DECREASE SIZE OF RING */
+    height: 500px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    background: radial-gradient( /* CHANGE RING COLOR */
+        circle at center,
+        transparent 0%,
+        transparent 45%,
+        rgba(45, 27, 105, 0.1) 50%,
+        rgba(45, 27, 105, 0.3) 55%,
+        rgba(45, 27, 105, 0.5) 60%,
+        rgba(45, 27, 105, 0.7) 65%,
+        rgba(45, 27, 105, 0.8) 70%,
+        rgba(45, 27, 105, 0.6) 75%,
+        rgba(45, 27, 105, 0.3) 80%,
+        transparent 85%
+    );
+    pointer-events: none;
+}
+
+.ripple:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.ripple:nth-child(2) {
+    animation-delay: 0.8s; 
+}
+
+.ripple:nth-child(3) {
+    animation-delay: 1.6s;
+}
+
+.ripple-out-1:hover .ripple {
+    animation: naturalRipple 2.5s ease-out infinite;
+}
+
+@keyframes naturalRipple {
+    0% {
+        transform: translate(-50%, -50%) scale(1.2); /* FROM WHERE THE RING STARTS */
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2.5); /* UPTO WHERE THE RING TRAVELS */
+        opacity: 0;
+    }
+}
+
+.ripple-out-1 h3 {
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+    @keyframes naturalRipple {
+        0% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(2.5);
+            opacity: 0;
+        }
+    }
+}

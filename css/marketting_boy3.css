@@ -1,0 +1,188 @@
+.profile-card_marketing_boy_2 {
+    width: 280px;
+    height: 280px;
+    background: #1a1a1a;
+    border-radius: 32px;
+    padding: 3px;
+    position: relative;
+    box-shadow: #333333 0px 70px 30px -50px;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid #333;
+}
+
+.email-button_marketing_boy_2 {
+    position: absolute;
+    right: 2rem;
+    top: 1.4rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.email-button_marketing_boy_2 i {
+    color: #8b5cf6;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.email-button_marketing_boy_2:hover i {
+    color: #a855f7;
+}
+
+.profile-image_marketing_boy_2 {
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    top: 3px;
+    left: 3px;
+    border-radius: 29px;
+    z-index: 1;
+    border: 0px solid #8b5cf6;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image_marketing_boy_2 img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: 0px 0px;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.profile-image-placeholder_marketing_boy_2 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card-content_marketing_boy_2 {
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    background: #8b5cf6;
+    top: 83%;
+    border-radius: 29px;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 5px 0px inset;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.user-info_marketing_boy_2 {
+    position: absolute;
+    bottom: 0;
+    left: 1.5rem;
+    right: 1.5rem;
+    height: 160px;
+}
+
+.user-name_marketing_boy_2 {
+    display: block;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.user-description_marketing_boy_2 {
+    display: block;
+    font-size: 0.9rem;
+    color: white;
+    margin-top: 1rem;
+    line-height: 1.4;
+}
+
+.action-area_marketing_boy_2 {
+    position: absolute;
+    bottom: .7rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-links_marketing_boy_2 {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links_marketing_boy_2 i {
+    font-size: 20px;
+    color: white;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-links_marketing_boy_2 i:hover {
+    color: #a855f7;
+    transform: scale(1.2);
+}
+
+.contact-button_marketing_boy_2 {
+    background: white;
+    color: #8b5cf6;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.6rem;
+    padding: 0.4rem 0.6rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-button_marketing_boy_2:hover {
+    background: #a855f7;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.profile-card_marketing_boy_2:hover {
+    border-top-left-radius: 55px;
+    transform: translateY(-5px);
+    box-shadow: #333333 0px 80px 40px -50px;
+}
+
+.profile-card_marketing_boy_2:hover .card-content_marketing_boy_2 {
+    top: 20%;
+    border-radius: 80px 29px 29px 29px;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+.profile-card_marketing_boy_2:hover .profile-image_marketing_boy_2 {
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    z-index: 3;
+    border: 7px solid #8b5cf6;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 5px 0px;
+    transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
+}
+
+.profile-card_marketing_boy_2:hover .profile-image_marketing_boy_2:hover {
+    transform: scale(1.3);
+    border-radius: 0px;
+}
+
+.profile-card_marketing_boy_2:hover .profile-image_marketing_boy_2 img {
+    transform: scale(2.5);
+    object-position: 0px 25px;
+    transition: all 0.5s ease-in-out 0.5s;
+}

@@ -1,0 +1,38 @@
+.title-showcase_side_facelift_lessbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 24px;
+    overflow: hidden;
+    line-height: 1.6;
+    /* background-color: #1a1a1a; */
+    background: radial-gradient(circle at 20% 50%, rgba(78, 84, 200, 0.1) 0%, transparent 100%), #191937;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.main-content_side_facelift_lessbar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.title-showcase_side_facelift_lessbar:hover {
+    box-shadow: 8px 8px #632cc3;
+    border: none;
+    transform: translate(-8px, -8px);
+}
+
+.main-title_side_facelift_lessbar {
+    font-size: 3em;
+    margin: 0;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    letter-spacing: 2px;
+}

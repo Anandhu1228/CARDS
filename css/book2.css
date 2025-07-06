@@ -1,0 +1,58 @@
+.book-card-container {
+    position: relative;
+    border-radius: 12px;
+    width: 260px;
+    height: 300px;
+    background-color: #1e1e1e;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.book-content_1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+.book-cover_1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background: linear-gradient(135deg, #3a0ca3 0%, #7209b7 100%); */
+    background: radial-gradient(circle at 20% 50%, rgba(78, 84, 200, 0.1) 0%, transparent 100%), #161626;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: left center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.book-card-container:hover .book-cover_1 {
+    transform: rotateY(-85deg);
+}
+
+.cover-label {
+    transform: rotateY(30deg);
+    transition: transform 0.3s ease;
+}
+
+.book-card-container:hover .cover-label {
+    transform: rotateY(0);
+    opacity: 0.8;
+}

@@ -1,0 +1,165 @@
+.social-media-card_market_boy {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #1a1a1a;
+    border-radius: 1.6em;
+    overflow: hidden;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 0.8em 3em 0px;
+    transition: all 1s ease-in-out;
+    user-select: none;
+}
+
+.gradient-background_market_boy {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at 100% 107%,
+        #1a1a2e 0%,
+        #16213e 30%,
+        #0f3460 60%,
+        #533483 100%
+    );
+}
+
+.brand-logo_market_boy {
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    transition: all 0.6s ease-in-out;
+}
+
+.brand-logo_market_boy .logo-symbol_market_boy {
+    color: #ffffff;
+    font-size: 3em;
+}
+
+.social-icon_market_boy {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon_market_boy .platform-icon_market_boy {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5em;
+    transition: all 0.5s ease-in-out;
+}
+
+.social-platform_market_boy {
+    position: absolute;
+    padding: 1em;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 0.2em solid rgba(255, 255, 255, 0.3);
+    border-right: 0.1em solid rgba(255, 255, 255, 0.2);
+    border-radius: 10% 13% 42% 0%/10% 12% 75% 0%;
+    box-shadow: rgba(255, 255, 255, 0.1) -0.8em 0.8em 3em 0px;
+    transform-origin: bottom left;
+    transition: all 1s ease-in-out;
+}
+
+.social-platform_market_boy::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.social-platform_market_boy:hover .platform-icon_market_boy {
+    color: white;
+}
+
+.instagram-box_market_boy {
+    width: 70%;
+    height: 70%;
+    bottom: -70%;
+    left: -70%;
+}
+
+.instagram-box_market_boy::before {
+    background: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #ff53d4 60%,
+        #62c2fe 90%
+    );
+}
+
+.instagram-box_market_boy:hover::before {
+    opacity: 1;
+}
+
+.instagram-box_market_boy:hover .social-icon_market_boy .platform-icon_market_boy {
+    filter: drop-shadow(0 0 0.5em white);
+}
+
+.twitter-box_market_boy {
+    width: 50%;
+    height: 50%;
+    bottom: -50%;
+    left: -50%;
+    transition-delay: 0.2s;
+}
+
+.twitter-box_market_boy::before {
+    background: radial-gradient(circle at 30% 107%, #91e9ff 0%, #00acee 90%);
+}
+
+.twitter-box_market_boy:hover::before {
+    opacity: 1;
+}
+
+.twitter-box_market_boy:hover .social-icon_market_boy .platform-icon_market_boy {
+    filter: drop-shadow(0 0 0.5em white);
+}
+
+.discord-box_market_boy {
+    width: 30%;
+    height: 30%;
+    bottom: -30%;
+    left: -30%;
+    transition-delay: 0.4s;
+}
+
+.discord-box_market_boy::before {
+    background: radial-gradient(circle at 30% 107%, #969fff 0%, #7289da 90%);
+}
+
+.discord-box_market_boy:hover::before {
+    opacity: 1;
+}
+
+.discord-box_market_boy:hover .social-icon_market_boy .platform-icon_market_boy {
+    filter: drop-shadow(0 0 0.5em white);
+}
+
+.empty-box_market_boy {
+    width: 10%;
+    height: 10%;
+    bottom: -10%;
+    left: -10%;
+    transition-delay: 0.6s;
+}
+
+.social-media-card_market_boy:hover {
+    transform: scale(1.1);
+}
+
+.social-media-card_market_boy:hover .social-platform_market_boy {
+    bottom: -0.1em;
+    left: -0.1em;
+}
+
+.social-media-card_market_boy:hover .brand-logo_market_boy {
+    transform: translate(0, 0);
+    bottom: 2em;
+    right: 2em;
+}

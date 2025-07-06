@@ -1,0 +1,79 @@
+.notification-card_down_snatcher {
+    width: 164px;
+    background: #0a0a0a;
+    border: 3px solid #1a1a2e;
+    border-radius: 15px;
+    position: relative;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    transition: all 1s ease;
+    color: #e5e7eb;
+}
+
+.notification-card_down_snatcher::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 77px;
+    border-radius: 50%;
+    background-color: #533483;
+}
+
+.date-time-display_down_snatcher {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.current-time_down_snatcher {
+    font-size: 2em;
+    color: #a855f7;
+}
+
+.current-date_down_snatcher {
+    color: #9ca3af;
+}
+
+.notification-popup_down_snatcher {
+    background-color: #1a1a2e;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    font-size: .8em;
+    padding: 3px;
+    border: 1px solid #16213e;
+}
+
+.notification-popup_down_snatcher .notification-title_down_snatcher {
+    font-size: 9px;
+    color: #a855f7;
+    margin: 0;
+}
+
+.notification-popup_down_snatcher p {
+    margin: 2px 0;
+    color: #d1d5db;
+}
+
+.date-time-display_down_snatcher, 
+.notification-popup_down_snatcher {
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.notification-card_down_snatcher:hover {
+    transform: rotate3d(5, 5, 10, -45deg);
+    box-shadow: 
+        -40px 0px 5px 10px #533483, 
+        -80px 0px 10px 20px #1a1a2e, 
+        -120px 0px 20px 40px #0f3460;
+}
+
+.notification-card_down_snatcher:hover .date-time-display_down_snatcher, 
+.notification-card_down_snatcher:hover .notification-popup_down_snatcher {
+    opacity: 1;
+}

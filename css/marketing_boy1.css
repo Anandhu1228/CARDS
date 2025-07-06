@@ -1,0 +1,197 @@
+.ai-card-container {
+    width: 300px;
+    perspective: 1000px;
+}
+
+.ai-card {
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #7b2cbf 0%, #3c096c 100%);
+    transition: all 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 30px rgba(28, 6, 49, 0.5);
+}
+
+.ai-glass-layer {
+    transform-style: preserve-3d;
+    position: absolute;
+    inset: 8px;
+    border-radius: 55px;
+    border-top-right-radius: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
+    transform: translate3d(0px, 0px, 25px);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.5s ease-in-out;
+    backdrop-filter: blur(5px);
+}
+
+.ai-card-content {
+    padding: 100px 60px 0px 30px;
+    transform: translate3d(0, 0, 26px);
+}
+
+.ai-card-title {
+    display: block;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ai-card-description {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.ai-card-footer {
+    padding: 10px 12px;
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translate3d(0, 0, 26px);
+}
+
+.ai-social-buttons {
+    display: flex;
+    gap: 10px;
+    transform-style: preserve-3d;
+}
+
+.ai-social-button {
+    width: 30px;
+    aspect-ratio: 1;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border: none;
+    display: grid;
+    place-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ai-social-button i {
+    color: #e0aaff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.ai-social-button:hover {
+    background: #7b2cbf;
+    transform: translateY(-2px);
+}
+
+.ai-social-button:hover i {
+    color: white;
+}
+
+.ai-social-button:active {
+    background: #9d4edd;
+    transform: translateY(0);
+}
+
+.ai-logo-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-style: preserve-3d;
+}
+
+.ai-logo-circle {
+    display: block;
+    position: absolute;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    background: rgba(123, 44, 191, 0.2);
+    transition: all 0.5s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ai-logo-circle-large {
+    width: 170px;
+    transform: translate3d(0, 0, 20px);
+    top: 8px;
+    right: 8px;
+}
+
+.ai-logo-circle-medium {
+    width: 140px;
+    transform: translate3d(0, 0, 40px);
+    top: 10px;
+    right: 10px;
+    transition-delay: 0.4s;
+}
+
+.ai-logo-circle-small {
+    width: 110px;
+    transform: translate3d(0, 0, 60px);
+    top: 17px;
+    right: 17px;
+    transition-delay: 0.8s;
+}
+
+.ai-logo-circle-xsmall {
+    width: 80px;
+    transform: translate3d(0, 0, 80px);
+    top: 23px;
+    right: 23px;
+    transition-delay: 1.2s;
+}
+
+.ai-logo-icon {
+    width: 50px;
+    transform: translate3d(0, 0, 100px);
+    top: 30px;
+    right: 30px;
+    display: grid;
+    place-content: center;
+    transition-delay: 1.6s;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.ai-logo-icon i {
+    color: #e0aaff;
+    font-size: 20px;
+}
+
+.ai-card-container:hover .ai-card {
+    transform: rotate3d(1, 1, 0, 30deg);
+    box-shadow: 0 15px 40px rgba(28, 6, 49, 0.6);
+}
+
+.ai-card-container:hover .ai-card .ai-social-button {
+    transform: translate3d(0, 0, 50px) translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ai-card-container:hover .ai-card .ai-logo-circle-medium {
+    transform: translate3d(0, 0, 60px);
+}
+
+.ai-card-container:hover .ai-card .ai-logo-circle-small {
+    transform: translate3d(0, 0, 80px);
+}
+
+.ai-card-container:hover .ai-card .ai-logo-circle-xsmall {
+    transform: translate3d(0, 0, 100px);
+}
+
+.ai-card-container:hover .ai-card .ai-logo-icon {
+    transform: translate3d(0, 0, 120px);
+}

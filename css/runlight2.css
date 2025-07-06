@@ -1,0 +1,67 @@
+.card_2_run_light {
+    overflow: visible;
+}
+
+.content_2_run_light {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms;
+    box-shadow: 0px 0px 10px 1px #000000ee;
+    border-radius: 5px;
+}
+
+.back_2_run_light {
+    background-color: #151515;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.back_2_run_light {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.back_2_run_light::before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 160px;
+    height: 160%;
+    background: linear-gradient(90deg, transparent, #667aff, #667aff, #667aff, #667aff, transparent);
+    animation: rotation_481_2_run_light 5000ms infinite linear;
+}
+
+.back-content_2_run_light {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    /* background-color: #151515; */
+    background: radial-gradient(circle at 20% 50%, rgba(78, 84, 200, 0.1) 0%, transparent 100%), #0a0a14;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+@keyframes rotation_481_2_run_light {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    0% {
+        transform: rotateZ(360deg);
+    }
+}

@@ -1,0 +1,91 @@
+.tiltCard {
+    height: 300px;
+    background: radial-gradient(circle at 20% 50%, rgba(78, 84, 200, 0.1) 0%, transparent 100%), #0a0a14;
+    border-radius: 20px;
+    padding: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 2px solid rgba(255,255,255,0.1);
+}
+
+.tiltCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, 
+        rgba(255,255,255,0.1) 0%,
+        rgba(255,255,255,0.05) 50%,
+        rgba(0,0,0,0.1) 100%);
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.tiltCard::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(102,126,234,0.2) 0%, transparent 70%);
+    transform: translateZ(-1px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.tiltCard-content {
+    position: relative;
+    z-index: 2;
+}
+
+.tiltCard h3 {
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.tiltCard p {
+    color: #b0b0b0;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.tiltCard:hover::before {
+    opacity: 1;
+}
+
+.tiltCard:hover::after {
+    opacity: 1;
+}
+
+.tiltCard:hover {
+    box-shadow: 
+        0 25px 80px rgba(0,0,0,0.6),
+        0 0 0 1px rgba(255,255,255,0.2);
+}
+
+.tiltCard:hover h3 {
+    color: #667eea;
+    text-shadow: 0 0 20px rgba(102,126,234,0.5);
+}
+
+.tiltCard:hover p {
+    color: #d0d0d0;
+}

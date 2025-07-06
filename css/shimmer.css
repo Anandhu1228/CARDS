@@ -1,0 +1,69 @@
+.shimmer-card {
+    height: 300px;
+    background: radial-gradient(circle at 20% 50%, rgba(78, 84, 200, 0.1) 0%, transparent 100%), #0a0a14;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+.shimmer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(138, 43, 226, 0.2) 30%,
+        rgba(147, 112, 219, 0.3) 50%,
+        rgba(75, 0, 130, 0.2) 70%,
+        transparent 100%
+    );
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+}
+
+.shimmer-card:hover::before {
+    animation: shimmer 1.5s linear infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+.shimmer-card h3 {
+    color: #f2f2f2;
+    margin-bottom: 20px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.shimmer-card p {
+    color: #dbdbdb;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}

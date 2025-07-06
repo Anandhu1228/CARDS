@@ -1,0 +1,217 @@
+.card-container_hide_and_seek_card {
+    position: relative;
+    overflow: hidden;
+    width: var(--w-wrap-card);
+    height: calc(var(--h-card) / 1.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --w-card: 200px;
+    --h-card: 280px;
+    --rotate-card: 15deg;
+    --insetX-card: 35px;
+    --t-card: calc(var(--insetX-card) * 1.25);
+    --w-wrap-card: calc(var(--w-card) + calc(calc(var(--w-card) / 2) * 2));
+}
+
+.title-card_hide_and_seek_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    overflow: hidden;
+    animation: rotating_hide_and_seek_card 9s cubic-bezier(0.75, 0, 0, 1.01) infinite 0s;
+    border-radius: var(--round);
+    background: var(--bg);
+    order: var(--order);
+    width: var(--w-card);
+    height: var(--h-card);
+    z-index: var(--z1);
+    top: var(--t1);
+    left: var(--l1);
+    right: var(--r1);
+    transform: var(--trans1);
+    --pd: 4px;
+    --round: 16px;
+    --x1: var(--insetX-card);
+    --x2: calc(var(--w-wrap-card) - calc(var(--w-card) + var(--insetX-card)));
+    --to-left: rotate(calc(var(--rotate-card) * -1));
+    --to-center: calc(var(--w-card) / 2);
+    --to-right: rotate(calc(var(--rotate-card) * 1));
+}
+
+.card-content_hide_and_seek_card {
+    background-color: rgba(78, 84, 200, 0.15);
+    overflow: hidden;
+    position: relative;
+    width: calc(100% - calc(var(--pd) * 2));
+    height: calc(100% - calc(var(--pd) * 2));
+    border-radius: calc(var(--round) - var(--pd));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(78, 84, 200, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.card-title_hide_and_seek_card {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 0;
+    z-index: 10;
+    text-shadow: 0 0 10px rgba(78, 84, 200, 0.5);
+}
+
+.title-card_hide_and_seek_card:nth-child(1) {
+    --order: 2;
+    --bg: linear-gradient(135deg, rgba(78, 84, 255, 0.4) 0%, rgba(10, 60, 255, 0.3) 100%);
+    --z1: 2;
+    --t1: 0;
+    --l1: var(--to-center);
+    --r1: var(--to-center);
+    --trans1: rotate(calc(var(--rotate-card) * 0));
+    --z2: 0;
+    --t2: var(--t-card);
+    --l2: var(--x1);
+    --r2: var(--x2);
+    --trans2: var(--to-left);
+    --z3: 0;
+    --t3: var(--t-card);
+    --l3: var(--x2);
+    --r3: var(--x1);
+    --trans3: var(--to-right);
+}
+
+.title-card_hide_and_seek_card:nth-child(2) {
+    --order: 3;
+    --bg: linear-gradient(135deg, rgba(0, 212, 255, 0.4) 0%, rgba(0, 128, 255, 0.3) 100%);
+    --z1: 0;
+    --t1: var(--t-card);
+    --l1: var(--x2);
+    --r1: var(--x1);
+    --trans1: var(--to-right);
+    --z2: 2;
+    --t2: 0;
+    --l2: var(--to-center);
+    --r2: var(--to-center);
+    --trans2: rotate(calc(var(--rotate-card) * 0));
+    --z3: 0;
+    --t3: var(--t-card);
+    --l3: var(--x1);
+    --r3: var(--x2);
+    --trans3: var(--to-left);
+}
+
+.title-card_hide_and_seek_card:nth-child(3) {
+    --order: 1;
+    --bg: linear-gradient(135deg, rgba(255, 78, 244, 0.4) 0%, rgba(139, 6, 255, 0.3) 100%);
+    --z1: 0;
+    --t1: var(--t-card);
+    --l1: var(--x1);
+    --r1: var(--x2);
+    --trans1: var(--to-left);
+    --z2: 0;
+    --t2: var(--t-card);
+    --l2: var(--x2);
+    --r2: var(--x1);
+    --trans2: var(--to-right);
+    --z3: 2;
+    --t3: 0;
+    --l3: var(--to-center);
+    --r3: var(--to-center);
+    --trans3: rotate(calc(var(--rotate-card) * 0));
+}
+
+@keyframes rotating_hide_and_seek_card {
+    0%, 99.99% {
+        z-index: var(--z1);
+        top: var(--t1);
+        left: var(--l1);
+        right: var(--r1);
+        transform: var(--trans1);
+    }
+    33.33% {
+        z-index: var(--z2);
+        top: var(--t2);
+        left: var(--l2);
+        right: var(--r2);
+        transform: var(--trans2);
+    }
+    66.66% {
+        z-index: var(--z3);
+        top: var(--t3);
+        left: var(--l3);
+        right: var(--r3);
+        transform: var(--trans3);
+    }
+}
+
+.light-lines_hide_and_seek_card {
+    position: absolute;
+    inset: auto 0 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+}
+
+.light-lines_hide_and_seek_card::after {
+    content: "";
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    --mask-bg: rgba(78, 84, 200, 0.2);
+    background: var(--mask-bg);
+    mask-image: radial-gradient(50% 200px at top, transparent 20%, var(--mask-bg));
+}
+
+.light-beam_hide_and_seek_card {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.light-beam_hide_and_seek_card::before,
+.light-beam_hide_and_seek_card::after {
+    content: "";
+    position: absolute;
+    inset: auto;
+    background: linear-gradient(to right, var(--gradient-a-line, #0000), var(--gradient-b-line, #0000), var(--gradient-c-line, #0000));
+    filter: var(--blur-line);
+    width: var(--w-line);
+    height: var(--h-line);
+}
+
+.light-beam_hide_and_seek_card:nth-child(1)::before {
+    --blur-line: blur(4px);
+    --w-line: 100%;
+    --h-line: 5px;
+    --gradient-b-line: rgba(78, 84, 255, 0.6);
+}
+
+.light-beam_hide_and_seek_card:nth-child(1)::after {
+    --w-line: 100%;
+    --h-line: 1px;
+    --gradient-b-line: rgba(10, 60, 255, 0.8);
+}
+
+.light-beam_hide_and_seek_card:nth-child(2)::before {
+    --blur-line: blur(4px);
+    --w-line: 50%;
+    --h-line: 5px;
+    --gradient-b-line: rgba(0, 212, 255, 0.6);
+}
+
+.light-beam_hide_and_seek_card:nth-child(2)::after {
+    --w-line: 50%;
+    --h-line: 1px;
+    --gradient-b-line: rgba(0, 128, 255, 0.8);
+}

@@ -1,0 +1,76 @@
+.three-d-cube-wrapper_rotamax_cube {
+    width: 200px;
+    height: 200px;
+    perspective: 800px;
+}
+
+.rotating-cube_rotamax_cube {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: spin-continuously_rotamax_cube 15s infinite linear;
+}
+
+.cube-side_rotamax_cube {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    color: #a855f7;
+    font-size: 18px;
+    text-align: center;
+    line-height: 200px;
+    background: transparent;
+    opacity: 0.9;
+    border: 2px solid;
+    border-image: linear-gradient(
+        90deg,
+        #1a1a2e 0%,
+        #16213e 26%,
+        #0f3460 85%
+    );
+    box-shadow: 0 0 100px rgba(83, 52, 131, 0.61);
+}
+
+.front-face_rotamax_cube {
+    transform: translateZ(100px);
+    background: linear-gradient(160deg, #1a1a2e 0%, #533483 100%);
+}
+
+.back-face_rotamax_cube {
+    transform: rotateY(180deg) translateZ(100px);
+    background: linear-gradient(160deg, #16213e 0%, #533483 100%);
+}
+
+.right-face_rotamax_cube {
+    transform: rotateY(90deg) translateZ(100px);
+    background: linear-gradient(160deg, #0f3460 0%, #533483 100%);
+}
+
+.left-face_rotamax_cube {
+    transform: rotateY(-90deg) translateZ(100px);
+    background: linear-gradient(160deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.top-face_rotamax_cube {
+    transform: rotateX(90deg) translateZ(100px);
+    background: linear-gradient(160deg, #16213e 0%, #0f3460 100%);
+}
+
+.bottom-face_rotamax_cube {
+    transform: rotateX(-90deg) translateZ(100px);
+    background: linear-gradient(160deg, #0f3460 0%, #1a1a2e 100%);
+}
+
+.three-d-cube-wrapper_rotamax_cube:hover .rotating-cube_rotamax_cube {
+    animation-play-state: paused;
+}
+
+@keyframes spin-continuously_rotamax_cube {
+    0% {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}

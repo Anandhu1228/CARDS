@@ -1,0 +1,76 @@
+.about-card {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    animation: float 6s ease-in-out infinite;
+}
+
+.light-runner_about_light {
+    position: absolute;
+    top: -180px;
+    left: -180px;
+    right: -180px;
+    bottom: -180px;
+    background: conic-gradient(from -90deg,
+            transparent 0deg,
+            transparent 10deg,
+            rgba(78, 84, 200, 0.1) 20deg,
+            rgba(78, 84, 200, 0.3) 40deg,
+            rgba(78, 84, 200, 0.6) 70deg,
+            rgba(78, 84, 200, 1) 90deg,
+            rgba(78, 84, 200, 0.6) 110deg,
+            rgba(78, 84, 200, 0.3) 140deg,
+            rgba(78, 84, 200, 0.1) 160deg,
+            transparent 170deg,
+            transparent 360deg);
+    animation: aboutLightRotate 6s linear infinite;
+    z-index: 1;
+}
+
+.card-inner_about_light {
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: radial-gradient(circle at 20% 50%, rgba(78, 84, 200, 0.1) 0%, transparent 100%), #0a0a14;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.about-highlight {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: bold;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+}
+
+.about-description {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    padding: 0 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes aboutLightRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

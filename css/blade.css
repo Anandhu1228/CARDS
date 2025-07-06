@@ -1,0 +1,29 @@
+.action-button_blade {
+    width: 150px;
+    height: 150px;
+    background: #3d2a5c;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 900;
+    color: #e8e0ff;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.button-label_blade {
+    transition: all 0.3s ease-in-out;
+    font-size: 24px;
+}
+
+.action-button_blade:hover {
+    box-shadow: 75px 75px 5px -20px #6b4d8a, -75px 75px 5px -20px #8a5fd6, -75px -75px 5px -20px #6b4d8a, 75px -75px 5px -20px #8a5fd6;
+    transform: rotate(-45deg);
+}
+
+.action-button_blade:hover .button-label_blade {
+    transform: rotate(45deg);
+}

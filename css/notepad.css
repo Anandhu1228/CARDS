@@ -1,0 +1,50 @@
+.notebook-paper-my-note-boy {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 300px;
+    font-family: cursive;
+    font-size: 20px;
+    border-radius: 10px;
+    background: #2a2a2a;
+    background-image: linear-gradient(#333333 1.1rem, #555555 1.2rem);
+    background-size: 100% 1.2rem;
+    line-height: 1.2rem;
+    padding: 1.4rem 0.5rem 0.3rem 4.5rem;
+}
+.notebook-paper-my-note-boy::before,
+.notebook-paper-my-note-boy::after {
+    position: absolute;
+    content: "";
+    bottom: 10px;
+    width: 40%;
+    height: 10px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.9);
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+.notebook-paper-my-note-boy::before {
+    left: 15px;
+    transform: skew(-5deg) rotate(-5deg);
+}
+.notebook-paper-my-note-boy::after {
+    right: 15px;
+    transform: skew(5deg) rotate(5deg);
+}
+.notebook-paper-my-note-boy:hover::before,
+.notebook-paper-my-note-boy:hover::after {
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
+}
+.red-margin-line-my-note-boy {
+    position: absolute;
+    border-left: 1px solid #cc4444;
+    height: 100%;
+    left: 3.3rem;
+    top: 0;
+}
+.notebook-paper-my-note-boy .written-text-my-note-boy {
+    margin: 0;
+    text-indent: 1rem;
+    padding-bottom: 1.2rem;
+    color: #e0e0e0;
+    line-height: 20px;
+}

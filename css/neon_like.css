@@ -1,0 +1,76 @@
+.glowing-card_super_halloween {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #111111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 18px; 
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.glowing-card_super_halloween::before {
+    content: "";
+    position: absolute;
+    left: -5px; 
+    margin: auto;
+    width: 310px; 
+    height: 310px; 
+    border-radius: 16px;
+    background: linear-gradient(-45deg, #ff6b6b 0%, #ffd93d 100%);
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glowing-card_super_halloween::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #ff6b6b 0%, #ffd93d 100%);
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(30px); 
+}
+
+.main-title_super_halloween {
+    font-size: 28px;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.glowing-card_super_halloween .description-text_super_halloween:not(.main-title_super_halloween) {
+    font-size: 18px; 
+    color: #cccccc;
+}
+
+.glowing-card_super_halloween .description-text_super_halloween:last-child {
+    color: #ff6b6b;
+    font-weight: 600;
+}
+
+.glowing-card_super_halloween:hover::after {
+    filter: blur(40px); 
+}
+
+.glowing-card_super_halloween:hover::before {
+    transform: rotate(-90deg) scaleX(1) scaleY(1);
+}
+
+@media (max-width: 480px) {
+    .glowing-card_super_halloween {
+        width: 280px;
+        height: 280px;
+    }
+
+    .glowing-card_super_halloween::before {
+        left: -5px; 
+        width: 290px; 
+        height: 290px; 
+    }
+}

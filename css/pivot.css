@@ -1,0 +1,33 @@
+.pivotcard {
+    padding: 20px;
+    color: white;
+    /* background: linear-gradient(#212121, #212121) padding-box; */
+    background: radial-gradient(circle at 20% 50%, rgba(78, 84, 200, 0.1) 0%, transparent 100%), #1d1d38;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transform-origin: right bottom;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.pivotcard .main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pivotcard .heading {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 600;
+    text-align: center;
+}
+
+.pivotcard:hover {
+    rotate: 8deg;
+}

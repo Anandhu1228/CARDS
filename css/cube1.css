@@ -1,0 +1,116 @@
+.cube {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    transform: rotateX(15deg) rotateY(-15deg);
+}
+
+.cube:hover {
+    transform: rotateX(-15deg) rotateY(15deg);
+}
+
+.face {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.front {
+    transform: translateZ(150px);
+    border: 2px solid #1a4b8c;
+    background: radial-gradient(circle at 20% 50%, rgba(26, 75, 140, 0.3) 0%, transparent 100%), #0a0a14;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(150px);
+    border: 2px solid #143a6d;
+    background: radial-gradient(circle at 20% 50%, rgba(20, 58, 109, 0.3) 0%, transparent 100%), #0a0a14;
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(150px);
+    border: 2px solid #0d2c52;
+    background: radial-gradient(circle at 20% 50%, rgba(13, 44, 82, 0.3) 0%, transparent 100%), #0a0a14;
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(150px);
+    border: 2px solid #061d3a;
+    background: radial-gradient(circle at 20% 50%, rgba(6, 29, 58, 0.3) 0%, transparent 100%), #0a0a14;
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(150px);
+    background: #0d2c52;
+    border: 2px solid #0d2c52;
+    background: radial-gradient(circle at 20% 50%, rgba(13, 44, 82, 0.3) 0%, transparent 100%), #0a0a14;
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+    border: 2px solid #061d3a;
+    background: radial-gradient(circle at 20% 50%, rgba(6, 29, 58, 0.3) 0%, transparent 100%), #0a0a14;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.content {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .cube, .face {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .front, .back {
+        transform: translateZ(140px);
+    }
+    
+    .right {
+        transform: rotateY(90deg) translateZ(140px);
+    }
+    
+    .left {
+        transform: rotateY(-90deg) translateZ(140px);
+    }
+    
+    .top {
+        transform: rotateX(90deg) translateZ(140px);
+    }
+    
+    .bottom {
+        transform: rotateX(-90deg) translateZ(140px);
+    }
+    
+    .back {
+        transform: rotateY(180deg) translateZ(140px);
+    }
+    
+    .title {
+        font-size: 1.4rem;
+    }
+    
+    .content {
+        font-size: 0.8rem;
+    }
+}
